@@ -35,71 +35,161 @@
             btnModifArt = new Button();
             btnEliminarArt = new Button();
             btnDetalleArt = new Button();
+            lbDetaArt = new Label();
+            lbModArti = new Label();
+            lbBusqArt = new Label();
+            lbAgregarArt = new Label();
+            lbElimArt = new Label();
+            lbListArt = new Label();
             SuspendLayout();
             // 
             // lbGestionArt
             // 
             lbGestionArt.AutoSize = true;
-            lbGestionArt.Location = new Point(339, 9);
+            lbGestionArt.BackColor = SystemColors.GrayText;
+            lbGestionArt.BorderStyle = BorderStyle.FixedSingle;
+            lbGestionArt.Font = new Font("Roboto", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbGestionArt.ForeColor = SystemColors.ButtonHighlight;
+            lbGestionArt.Location = new Point(290, 20);
             lbGestionArt.Name = "lbGestionArt";
-            lbGestionArt.Size = new Size(111, 15);
+            lbGestionArt.Size = new Size(232, 31);
             lbGestionArt.TabIndex = 0;
             lbGestionArt.Text = "Gestión de artículos";
             // 
             // btnListArticulos
             // 
-            btnListArticulos.Location = new Point(159, 116);
+            btnListArticulos.BackgroundImage = Properties.Resources.lista_de_articulos;
+            btnListArticulos.BackgroundImageLayout = ImageLayout.Zoom;
+            btnListArticulos.Location = new Point(180, 105);
             btnListArticulos.Name = "btnListArticulos";
-            btnListArticulos.Size = new Size(110, 70);
+            btnListArticulos.Size = new Size(130, 90);
             btnListArticulos.TabIndex = 1;
-            btnListArticulos.Text = "Listado de artículos";
             btnListArticulos.UseVisualStyleBackColor = true;
             // 
             // btnBusqArt
             // 
-            btnBusqArt.Location = new Point(356, 116);
+            btnBusqArt.BackgroundImage = Properties.Resources.busqueda_articulos;
+            btnBusqArt.BackgroundImageLayout = ImageLayout.Zoom;
+            btnBusqArt.Location = new Point(493, 105);
             btnBusqArt.Name = "btnBusqArt";
-            btnBusqArt.Size = new Size(110, 70);
+            btnBusqArt.Size = new Size(130, 90);
             btnBusqArt.TabIndex = 2;
-            btnBusqArt.Text = "Búsqueda de artículos";
             btnBusqArt.UseVisualStyleBackColor = true;
             // 
             // btnAgregarArt
             // 
-            btnAgregarArt.Location = new Point(543, 116);
+            btnAgregarArt.BackgroundImage = Properties.Resources.agregar_producto;
+            btnAgregarArt.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAgregarArt.Location = new Point(180, 253);
             btnAgregarArt.Name = "btnAgregarArt";
-            btnAgregarArt.Size = new Size(110, 70);
+            btnAgregarArt.Size = new Size(130, 90);
             btnAgregarArt.TabIndex = 3;
-            btnAgregarArt.Text = "Agregar artículo";
             btnAgregarArt.UseVisualStyleBackColor = true;
             btnAgregarArt.Click += btnAgregarArt_Click;
             // 
             // btnModifArt
             // 
-            btnModifArt.Location = new Point(159, 246);
+            btnModifArt.BackgroundImage = Properties.Resources.modificar_articulos;
+            btnModifArt.BackgroundImageLayout = ImageLayout.Zoom;
+            btnModifArt.Location = new Point(335, 105);
             btnModifArt.Name = "btnModifArt";
-            btnModifArt.Size = new Size(110, 70);
+            btnModifArt.Size = new Size(130, 90);
             btnModifArt.TabIndex = 4;
-            btnModifArt.Text = "Modificar artículo";
             btnModifArt.UseVisualStyleBackColor = true;
             // 
             // btnEliminarArt
             // 
-            btnEliminarArt.Location = new Point(356, 246);
+            btnEliminarArt.BackgroundImage = Properties.Resources.eliminar_producto;
+            btnEliminarArt.BackgroundImageLayout = ImageLayout.Zoom;
+            btnEliminarArt.Location = new Point(335, 253);
             btnEliminarArt.Name = "btnEliminarArt";
-            btnEliminarArt.Size = new Size(110, 70);
+            btnEliminarArt.Size = new Size(130, 90);
             btnEliminarArt.TabIndex = 5;
-            btnEliminarArt.Text = "Eliminar artículo";
             btnEliminarArt.UseVisualStyleBackColor = true;
             // 
             // btnDetalleArt
             // 
-            btnDetalleArt.Location = new Point(543, 246);
+            btnDetalleArt.BackgroundImage = Properties.Resources.detalle_articulos;
+            btnDetalleArt.BackgroundImageLayout = ImageLayout.Zoom;
+            btnDetalleArt.Location = new Point(493, 253);
             btnDetalleArt.Name = "btnDetalleArt";
-            btnDetalleArt.Size = new Size(110, 70);
+            btnDetalleArt.Size = new Size(130, 90);
             btnDetalleArt.TabIndex = 6;
-            btnDetalleArt.Text = "Detalle de artículo";
             btnDetalleArt.UseVisualStyleBackColor = true;
+            // 
+            // lbDetaArt
+            // 
+            lbDetaArt.BackColor = SystemColors.GrayText;
+            lbDetaArt.Font = new Font("Roboto Light", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbDetaArt.ForeColor = SystemColors.ButtonHighlight;
+            lbDetaArt.Location = new Point(493, 235);
+            lbDetaArt.Name = "lbDetaArt";
+            lbDetaArt.Size = new Size(130, 20);
+            lbDetaArt.TabIndex = 7;
+            lbDetaArt.Text = "Detalle de artículos";
+            lbDetaArt.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lbModArti
+            // 
+            lbModArti.BackColor = SystemColors.GrayText;
+            lbModArti.Font = new Font("Roboto Light", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbModArti.ForeColor = SystemColors.ButtonHighlight;
+            lbModArti.Location = new Point(335, 86);
+            lbModArti.Name = "lbModArti";
+            lbModArti.Size = new Size(130, 20);
+            lbModArti.TabIndex = 8;
+            lbModArti.Text = "Modificar artículo";
+            lbModArti.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lbBusqArt
+            // 
+            lbBusqArt.BackColor = SystemColors.GrayText;
+            lbBusqArt.Font = new Font("Roboto Light", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbBusqArt.ForeColor = SystemColors.ButtonHighlight;
+            lbBusqArt.Location = new Point(493, 86);
+            lbBusqArt.Name = "lbBusqArt";
+            lbBusqArt.Size = new Size(130, 20);
+            lbBusqArt.TabIndex = 9;
+            lbBusqArt.Text = "Busqueda de artículo";
+            lbBusqArt.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lbAgregarArt
+            // 
+            lbAgregarArt.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lbAgregarArt.BackColor = SystemColors.GrayText;
+            lbAgregarArt.Font = new Font("Roboto Light", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbAgregarArt.ForeColor = SystemColors.ButtonHighlight;
+            lbAgregarArt.Location = new Point(180, 234);
+            lbAgregarArt.Name = "lbAgregarArt";
+            lbAgregarArt.Size = new Size(130, 20);
+            lbAgregarArt.TabIndex = 10;
+            lbAgregarArt.Text = "Agregar artículo";
+            lbAgregarArt.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lbElimArt
+            // 
+            lbElimArt.BackColor = SystemColors.GrayText;
+            lbElimArt.Font = new Font("Roboto Light", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbElimArt.ForeColor = SystemColors.ButtonHighlight;
+            lbElimArt.Location = new Point(335, 234);
+            lbElimArt.Name = "lbElimArt";
+            lbElimArt.Size = new Size(130, 20);
+            lbElimArt.TabIndex = 11;
+            lbElimArt.Text = "Eliminar artículo";
+            lbElimArt.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lbListArt
+            // 
+            lbListArt.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lbListArt.BackColor = SystemColors.GrayText;
+            lbListArt.Font = new Font("Roboto Light", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbListArt.ForeColor = SystemColors.ButtonHighlight;
+            lbListArt.Location = new Point(180, 86);
+            lbListArt.Name = "lbListArt";
+            lbListArt.Size = new Size(130, 20);
+            lbListArt.TabIndex = 12;
+            lbListArt.Text = "Listado de Artículos";
+            lbListArt.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -107,6 +197,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(800, 450);
+            Controls.Add(lbListArt);
+            Controls.Add(lbElimArt);
+            Controls.Add(lbAgregarArt);
+            Controls.Add(lbBusqArt);
+            Controls.Add(lbModArti);
+            Controls.Add(lbDetaArt);
             Controls.Add(btnDetalleArt);
             Controls.Add(btnEliminarArt);
             Controls.Add(btnModifArt);
@@ -114,6 +210,8 @@
             Controls.Add(btnBusqArt);
             Controls.Add(btnListArticulos);
             Controls.Add(lbGestionArt);
+            MaximumSize = new Size(816, 489);
+            MinimumSize = new Size(816, 489);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -129,5 +227,11 @@
         private Button btnModifArt;
         private Button btnEliminarArt;
         private Button btnDetalleArt;
+        private Label lbDetaArt;
+        private Label lbModArti;
+        private Label lbBusqArt;
+        private Label lbAgregarArt;
+        private Label lbElimArt;
+        private Label lbListArt;
     }
 }

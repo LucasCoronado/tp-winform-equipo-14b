@@ -49,6 +49,7 @@
             // 
             // txtboxCodArt
             // 
+            txtboxCodArt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtboxCodArt.Location = new Point(424, 80);
             txtboxCodArt.Name = "txtboxCodArt";
             txtboxCodArt.Size = new Size(100, 23);
@@ -56,24 +57,27 @@
             // 
             // txtboxPrecio
             // 
+            txtboxPrecio.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtboxPrecio.Location = new Point(424, 254);
             txtboxPrecio.Name = "txtboxPrecio";
             txtboxPrecio.Size = new Size(100, 23);
-            txtboxPrecio.TabIndex = 1;
+            txtboxPrecio.TabIndex = 6;
             // 
             // txtboxDescripcion
             // 
+            txtboxDescripcion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtboxDescripcion.Location = new Point(424, 138);
             txtboxDescripcion.Name = "txtboxDescripcion";
             txtboxDescripcion.Size = new Size(100, 23);
-            txtboxDescripcion.TabIndex = 5;
+            txtboxDescripcion.TabIndex = 2;
             // 
             // txtboxNombre
             // 
+            txtboxNombre.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtboxNombre.Location = new Point(424, 109);
             txtboxNombre.Name = "txtboxNombre";
             txtboxNombre.Size = new Size(100, 23);
-            txtboxNombre.TabIndex = 6;
+            txtboxNombre.TabIndex = 1;
             // 
             // lbCodArt
             // 
@@ -122,19 +126,21 @@
             // 
             // cboMarca
             // 
+            cboMarca.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cboMarca.FormattingEnabled = true;
             cboMarca.Location = new Point(423, 167);
             cboMarca.Name = "cboMarca";
             cboMarca.Size = new Size(101, 23);
-            cboMarca.TabIndex = 14;
+            cboMarca.TabIndex = 3;
             // 
             // cboCategoria
             // 
+            cboCategoria.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cboCategoria.FormattingEnabled = true;
             cboCategoria.Location = new Point(424, 196);
             cboCategoria.Name = "cboCategoria";
             cboCategoria.Size = new Size(100, 23);
-            cboCategoria.TabIndex = 15;
+            cboCategoria.TabIndex = 4;
             // 
             // lblCategoria
             // 
@@ -159,7 +165,7 @@
             btnAgregar.Location = new Point(258, 340);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(75, 23);
-            btnAgregar.TabIndex = 18;
+            btnAgregar.TabIndex = 7;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
             // 
@@ -168,7 +174,7 @@
             btnLimpiar.Location = new Point(390, 340);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(75, 23);
-            btnLimpiar.TabIndex = 19;
+            btnLimpiar.TabIndex = 8;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.UseVisualStyleBackColor = true;
             // 
@@ -177,16 +183,17 @@
             btnsalir.Location = new Point(524, 340);
             btnsalir.Name = "btnsalir";
             btnsalir.Size = new Size(75, 23);
-            btnsalir.TabIndex = 20;
+            btnsalir.TabIndex = 9;
             btnsalir.Text = "Salir";
             btnsalir.UseVisualStyleBackColor = true;
             // 
             // btnExaminar
             // 
+            btnExaminar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             btnExaminar.Location = new Point(423, 225);
             btnExaminar.Name = "btnExaminar";
             btnExaminar.Size = new Size(101, 23);
-            btnExaminar.TabIndex = 21;
+            btnExaminar.TabIndex = 5;
             btnExaminar.Text = "Examinar";
             btnExaminar.UseVisualStyleBackColor = true;
             // 
@@ -213,6 +220,7 @@
             Controls.Add(txtboxDescripcion);
             Controls.Add(txtboxPrecio);
             Controls.Add(txtboxCodArt);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "FrmArticulo";
             Text = "FrmArticulo";
             Load += FrmArticulo_Load;
