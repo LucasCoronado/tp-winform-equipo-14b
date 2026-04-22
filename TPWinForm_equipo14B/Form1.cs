@@ -17,5 +17,11 @@ namespace TPWinForm_equipo14B
         {
             this.Close();
         }
+
+        private void btnListArticulos_Click(object sender, EventArgs e)
+        {
+            frmListadoArticulos listadoArticulo = new frmListadoArticulos();
+            listadoArticulo.ShowDialog();
+        }
     }
 }

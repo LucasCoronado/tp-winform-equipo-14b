@@ -82,50 +82,50 @@
             // lbCodArt
             // 
             lbCodArt.AutoSize = true;
-            lbCodArt.Font = new Font("Roboto Light", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbCodArt.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbCodArt.Location = new Point(258, 83);
             lbCodArt.Name = "lbCodArt";
-            lbCodArt.Size = new Size(109, 18);
+            lbCodArt.Size = new Size(116, 16);
             lbCodArt.TabIndex = 7;
             lbCodArt.Text = "Código de articulo";
             // 
             // lbPrecio
             // 
             lbPrecio.AutoSize = true;
-            lbPrecio.Font = new Font("Roboto Light", 9.75F);
+            lbPrecio.Font = new Font("Microsoft Sans Serif", 9.75F);
             lbPrecio.Location = new Point(258, 260);
             lbPrecio.Name = "lbPrecio";
-            lbPrecio.Size = new Size(44, 18);
+            lbPrecio.Size = new Size(46, 16);
             lbPrecio.TabIndex = 10;
             lbPrecio.Text = "Precio";
             // 
             // lbMarca
             // 
             lbMarca.AutoSize = true;
-            lbMarca.Font = new Font("Roboto Light", 9.75F);
+            lbMarca.Font = new Font("Microsoft Sans Serif", 9.75F);
             lbMarca.Location = new Point(258, 170);
             lbMarca.Name = "lbMarca";
-            lbMarca.Size = new Size(44, 18);
+            lbMarca.Size = new Size(45, 16);
             lbMarca.TabIndex = 11;
             lbMarca.Text = "Marca";
             // 
             // lbDescripcion
             // 
             lbDescripcion.AutoSize = true;
-            lbDescripcion.Font = new Font("Roboto Light", 9.75F);
+            lbDescripcion.Font = new Font("Microsoft Sans Serif", 9.75F);
             lbDescripcion.Location = new Point(258, 141);
             lbDescripcion.Name = "lbDescripcion";
-            lbDescripcion.Size = new Size(76, 18);
+            lbDescripcion.Size = new Size(79, 16);
             lbDescripcion.TabIndex = 12;
             lbDescripcion.Text = "Descripción";
             // 
             // lbNombre
             // 
             lbNombre.AutoSize = true;
-            lbNombre.Font = new Font("Roboto Light", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbNombre.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbNombre.Location = new Point(258, 112);
             lbNombre.Name = "lbNombre";
-            lbNombre.Size = new Size(54, 18);
+            lbNombre.Size = new Size(56, 16);
             lbNombre.TabIndex = 13;
             lbNombre.Text = "Nombre";
             // 
@@ -152,26 +152,26 @@
             // lblCategoria
             // 
             lblCategoria.AutoSize = true;
-            lblCategoria.Font = new Font("Roboto Light", 9.75F);
+            lblCategoria.Font = new Font("Microsoft Sans Serif", 9.75F);
             lblCategoria.Location = new Point(257, 199);
             lblCategoria.Name = "lblCategoria";
-            lblCategoria.Size = new Size(62, 18);
+            lblCategoria.Size = new Size(66, 16);
             lblCategoria.TabIndex = 16;
             lblCategoria.Text = "Categoria";
             // 
             // lblImagen
             // 
             lblImagen.AutoSize = true;
-            lblImagen.Font = new Font("Roboto Light", 9.75F);
+            lblImagen.Font = new Font("Microsoft Sans Serif", 9.75F);
             lblImagen.Location = new Point(257, 231);
             lblImagen.Name = "lblImagen";
-            lblImagen.Size = new Size(52, 18);
+            lblImagen.Size = new Size(52, 16);
             lblImagen.TabIndex = 17;
             lblImagen.Text = "Imagen";
             // 
             // btnAgregar
             // 
-            btnAgregar.Font = new Font("Roboto Light", 9.75F);
+            btnAgregar.Font = new Font("Microsoft Sans Serif", 9.75F);
             btnAgregar.Location = new Point(258, 340);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(75, 30);
@@ -181,7 +181,7 @@
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Font = new Font("Roboto Light", 9.75F);
+            btnLimpiar.Font = new Font("Microsoft Sans Serif", 9.75F);
             btnLimpiar.Location = new Point(390, 340);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(75, 30);
@@ -192,7 +192,7 @@
             // 
             // btnsalir
             // 
-            btnsalir.Font = new Font("Roboto Light", 9.75F);
+            btnsalir.Font = new Font("Microsoft Sans Serif", 9.75F);
             btnsalir.Location = new Point(524, 340);
             btnsalir.Name = "btnsalir";
             btnsalir.Size = new Size(75, 30);
@@ -204,7 +204,7 @@
             // btnExaminar
             // 
             btnExaminar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            btnExaminar.Font = new Font("Roboto Light", 9.75F);
+            btnExaminar.Font = new Font("Microsoft Sans Serif", 9.75F);
             btnExaminar.Location = new Point(423, 225);
             btnExaminar.Name = "btnExaminar";
             btnExaminar.Size = new Size(101, 30);

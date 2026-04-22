@@ -18,6 +18,9 @@ namespace Dominio
         public Marca? Marca { get; set; }
         public Categoria? Categoria { get; set; }
 
+        public int IdMarca { get; set; }
+        public int IdCategoria { get; set; }
+
         public List<Imagen>? Imagenes { get; set; }
 
     }

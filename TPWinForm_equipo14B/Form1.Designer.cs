@@ -49,11 +49,11 @@
             lbGestionArt.AutoSize = true;
             lbGestionArt.BackColor = SystemColors.GrayText;
             lbGestionArt.BorderStyle = BorderStyle.FixedSingle;
-            lbGestionArt.Font = new Font("Roboto", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbGestionArt.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbGestionArt.ForeColor = SystemColors.ButtonHighlight;
             lbGestionArt.Location = new Point(290, 20);
             lbGestionArt.Name = "lbGestionArt";
-            lbGestionArt.Size = new Size(232, 31);
+            lbGestionArt.Size = new Size(248, 31);
             lbGestionArt.TabIndex = 0;
             lbGestionArt.Text = "Gestión de artículos";
             // 
@@ -66,6 +66,7 @@
             btnListArticulos.Size = new Size(130, 90);
             btnListArticulos.TabIndex = 1;
             btnListArticulos.UseVisualStyleBackColor = true;
+            btnListArticulos.Click += btnListArticulos_Click;
             // 
             // btnBusqArt
             // 
@@ -121,7 +122,7 @@
             // lbDetaArt
             // 
             lbDetaArt.BackColor = SystemColors.GrayText;
-            lbDetaArt.Font = new Font("Roboto Light", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbDetaArt.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbDetaArt.ForeColor = SystemColors.ButtonHighlight;
             lbDetaArt.Location = new Point(493, 235);
             lbDetaArt.Name = "lbDetaArt";
@@ -133,7 +134,7 @@
             // lbModArti
             // 
             lbModArti.BackColor = SystemColors.GrayText;
-            lbModArti.Font = new Font("Roboto Light", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbModArti.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbModArti.ForeColor = SystemColors.ButtonHighlight;
             lbModArti.Location = new Point(335, 86);
             lbModArti.Name = "lbModArti";
@@ -145,7 +146,7 @@
             // lbBusqArt
             // 
             lbBusqArt.BackColor = SystemColors.GrayText;
-            lbBusqArt.Font = new Font("Roboto Light", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbBusqArt.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbBusqArt.ForeColor = SystemColors.ButtonHighlight;
             lbBusqArt.Location = new Point(493, 86);
             lbBusqArt.Name = "lbBusqArt";
@@ -158,7 +159,7 @@
             // 
             lbAgregarArt.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lbAgregarArt.BackColor = SystemColors.GrayText;
-            lbAgregarArt.Font = new Font("Roboto Light", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbAgregarArt.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbAgregarArt.ForeColor = SystemColors.ButtonHighlight;
             lbAgregarArt.Location = new Point(180, 234);
             lbAgregarArt.Name = "lbAgregarArt";
@@ -170,7 +171,7 @@
             // lbElimArt
             // 
             lbElimArt.BackColor = SystemColors.GrayText;
-            lbElimArt.Font = new Font("Roboto Light", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbElimArt.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbElimArt.ForeColor = SystemColors.ButtonHighlight;
             lbElimArt.Location = new Point(335, 234);
             lbElimArt.Name = "lbElimArt";
@@ -183,7 +184,7 @@
             // 
             lbListArt.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lbListArt.BackColor = SystemColors.GrayText;
-            lbListArt.Font = new Font("Roboto Light", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbListArt.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbListArt.ForeColor = SystemColors.ButtonHighlight;
             lbListArt.Location = new Point(180, 86);
             lbListArt.Name = "lbListArt";
@@ -194,7 +195,7 @@
             // 
             // btnCerrar
             // 
-            btnCerrar.Font = new Font("Roboto Light", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCerrar.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCerrar.Location = new Point(703, 404);
             btnCerrar.Name = "btnCerrar";
             btnCerrar.Size = new Size(75, 34);
