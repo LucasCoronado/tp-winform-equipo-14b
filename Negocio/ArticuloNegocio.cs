@@ -22,8 +22,8 @@ namespace Negocio
                            A.IdMarca, M.Descripcion AS MarcaDescripcion, 
                            A.IdCategoria, C.Descripcion AS CategoriaDescripcion
                     FROM ARTICULOS A
-                    INNER JOIN MARCAS M ON A.IdMarca = M.Id
-                    INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id";
+                    LEFT JOIN MARCAS M ON A.IdMarca = M.Id
+                    LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id";
                 datos.SetearConsulta(consulta);
                 datos.ejecutarLectura();
 
@@ -37,15 +37,29 @@ namespace Negocio
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
                     aux.Precio = (decimal)datos.Lector["Precio"];
 
-                    aux.IdMarca = (int)datos.Lector["IdMarca"];
-                    aux.Marca = new Marca();
-                    aux.Marca.Id = aux.IdMarca;
-                    aux.Marca.Descripcion = (string)datos.Lector["MarcaDescripcion"];
+                    if (!(datos.Lector["IdMarca"] is DBNull))
+                    {
+                        aux.IdMarca = (int)datos.Lector["IdMarca"];
+                        aux.Marca = new Marca();
+                        aux.Marca.Id = aux.IdMarca;
+                        aux.Marca.Descripcion = datos.Lector["MarcaDescripcion"].ToString();
+                    }
+                    else
+                    {
+                        aux.Marca.Descripcion = "Sin Marca";
+                    }
 
-                    aux.IdCategoria = (int)datos.Lector["IdCategoria"];
-                    aux.Categoria = new Categoria();
-                    aux.Categoria.Id = aux.IdCategoria;
-                    aux.Categoria.Descripcion = (string)datos.Lector["CategoriaDescripcion"];
+                    if (!(datos.Lector["IdCategoria"] is DBNull))
+                    {
+                        aux.IdCategoria = (int)datos.Lector["IdCategoria"];
+                        aux.Categoria = new Categoria();
+                        aux.Categoria.Id = aux.IdCategoria;
+                        aux.Categoria.Descripcion = datos.Lector["CategoriaDescripcion"].ToString();
+                    }
+                    else
+                    {
+                        aux.Categoria.Descripcion = "Sin Categoría";
+                    }
 
                     lista.Add(aux);
                 }
