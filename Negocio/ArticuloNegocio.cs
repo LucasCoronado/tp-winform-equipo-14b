@@ -42,7 +42,15 @@ namespace Negocio
                         aux.IdMarca = (int)datos.Lector["IdMarca"];
                         aux.Marca = new Marca();
                         aux.Marca.Id = aux.IdMarca;
-                        aux.Marca.Descripcion = datos.Lector["MarcaDescripcion"].ToString();
+                        string? descripcion = datos.Lector["MarcaDescripcion"].ToString();
+                        if (descripcion == "")
+                        {
+                            aux.Marca.Descripcion = "Sin Marca";
+                        }
+                        else
+                        {
+                            aux.Marca.Descripcion = descripcion;
+                        }
                     }
                     else
                     {
@@ -54,7 +62,15 @@ namespace Negocio
                         aux.IdCategoria = (int)datos.Lector["IdCategoria"];
                         aux.Categoria = new Categoria();
                         aux.Categoria.Id = aux.IdCategoria;
-                        aux.Categoria.Descripcion = datos.Lector["CategoriaDescripcion"].ToString();
+                        string? descripcion = datos.Lector["CategoriaDescripcion"].ToString();
+                        if (descripcion == "")
+                        {
+                            aux.Categoria.Descripcion = "Sin Categoría";
+                        }
+                        else
+                        {
+                            aux.Categoria.Descripcion = descripcion;
+                        }
                     }
                     else
                     {
