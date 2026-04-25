@@ -21,7 +21,7 @@ namespace Negocio
 
         public AccesoDatos()
         {
-            string cadenaConexion = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true; TrustServerCertificate=True;";
+            string cadenaConexion = "server=(localdb)\\MSSQLLocalDB; database=CATALOGO_P3_DB; integrated security=true; TrustServerCertificate=True;";
             conexion = new SqlConnection(cadenaConexion);
             comando = new SqlCommand();
         }

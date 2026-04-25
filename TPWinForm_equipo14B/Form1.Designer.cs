@@ -120,6 +120,7 @@
             btnDetalleArt.Size = new Size(130, 90);
             btnDetalleArt.TabIndex = 6;
             btnDetalleArt.UseVisualStyleBackColor = true;
+            btnDetalleArt.Click += btnDetalleArt_Click;
             // 
             // lbDetaArt
             // 
