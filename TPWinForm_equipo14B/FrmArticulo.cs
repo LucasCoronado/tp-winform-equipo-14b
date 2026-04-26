@@ -196,6 +196,7 @@ namespace TPWinForm_equipo14B
 
             if (articulo == null) 
             {
+                articulo = new Articulo();
                 articulo.Imagenes = new List<Imagen>();
             }
             else
