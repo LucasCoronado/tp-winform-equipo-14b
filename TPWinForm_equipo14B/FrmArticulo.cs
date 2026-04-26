@@ -31,20 +31,25 @@ namespace TPWinForm_equipo14B
             MarcaNegocio marcaNegocio = new MarcaNegocio();
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
 
+            if (articulo != null)
+            {
+                txtboxCodArt.Text = articulo.Codigo;
+                txtboxNombre.Text = articulo.Nombre;
+                txtboxDescripcion.Text = articulo.Descripcion;
+
+                cboMarca.SelectedValue = articulo.IdMarca;
+                cboCategoria.SelectedValue = articulo.IdCategoria;
+
+                txtboxPrecio.Text = articulo.Precio.ToString();
+            }
+
             cboMarca.DataSource = marcaNegocio.Listar();
+            cboMarca.ValueMember = "Id";
+            cboMarca.DisplayMember = "Descripcion";
             cboCategoria.DataSource = categoriaNegocio.Listar();
-            /*
-            cboMarca.Items.Add("marca 1");
-            cboMarca.Items.Add("marca 2");
-            cboMarca.Items.Add("marca 3");
-            cboMarca.Items.Add("marca 4");
-            cboMarca.Items.Add("marca 5");
-            cboCategoria.Items.Add("Categoria 1");
-            cboCategoria.Items.Add("Categoria 2");
-            cboCategoria.Items.Add("Categoria 3");
-            cboCategoria.Items.Add("Categoria 4");
-            cboCategoria.Items.Add("Categoria 5");
-            */
+            cboCategoria.ValueMember = "Id";
+            cboCategoria.DisplayMember = "Descripcion";
+
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -64,28 +69,118 @@ namespace TPWinForm_equipo14B
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+
+            if (!validarCampos())
+            {
+                MessageBox.Show("Por favor, complete los campos marcados en rojo.");
+                return;
+            }
             Articulo nuevo = new Articulo();
             ArticuloNegocio negocio = new ArticuloNegocio();
 
-            try
+            nuevo.Codigo = txtboxCodArt.Text;
+            nuevo.Nombre = txtboxNombre.Text;
+            nuevo.Descripcion = txtboxDescripcion.Text;
+            nuevo.Precio = decimal.Parse(txtboxPrecio.Text);
+
+            nuevo.IdMarca = ((Marca)cboMarca.SelectedItem).Id;
+            nuevo.IdCategoria = ((Categoria)cboCategoria.SelectedItem).Id;
+            
+            if (articulo == null)
             {
-                nuevo.Codigo = txtboxCodArt.Text;
-                nuevo.Nombre = txtboxNombre.Text;
-                nuevo.Descripcion = txtboxDescripcion.Text;
-                nuevo.Precio = decimal.Parse(txtboxPrecio.Text);
+                try
+                {
 
-                nuevo.IdMarca = ((Marca)cboMarca.SelectedItem).Id;
-                nuevo.IdCategoria = ((Categoria)cboCategoria.SelectedItem).Id;
+                    negocio.Agregar(nuevo);
 
-                negocio.Agregar(nuevo);
-
-                MessageBox.Show("Artículo agregado correctamente");
+                    MessageBox.Show("Artículo agregado correctamente");
+                    Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+            else
+            {
+                negocio.Modificar(articulo, nuevo);
+                MessageBox.Show("Artículo modificado correctamente");
                 Close();
             }
-            catch (Exception ex)
+
+            this.DialogResult = DialogResult.OK;
+        }
+
+        private void txtboxPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar))
             {
-                MessageBox.Show(ex.ToString());
+                e.Handled = false;
             }
+            else if (e.KeyChar == ',' || e.KeyChar == '.')
+            {
+                if (txtboxPrecio.Text.Contains(",") || txtboxPrecio.Text.Contains("."))
+                {
+                    e.Handled = true;
+                }
+                else
+                {
+                    e.Handled = false;
+                }
+            }
+            else
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void txtboxPrecio_Validating(object sender, CancelEventArgs e)
+        {
+            if (!decimal.TryParse(txtboxPrecio.Text, out _) && !string.IsNullOrEmpty(txtboxPrecio.Text))
+            {
+                MessageBox.Show("Debe ingresar un número decimal válido.");
+                txtboxPrecio.Text = "";
+            }
+            else
+            {
+                txtboxPrecio.Text = "";
+            }
+        }
+
+        private bool validarCampos()
+        {
+            bool todoOk = true;
+
+            foreach (Control control in this.Controls)
+            {
+                if (control is TextBox)
+                {
+                    if (string.IsNullOrWhiteSpace(control.Text))
+                    {
+                        control.BackColor = Color.LightSalmon;
+                        todoOk = false;
+                    }
+                    else
+                    {
+                        control.BackColor = SystemColors.Window;
+                    }
+                }
+                if (control is ComboBox)
+                {
+                    if (((ComboBox)control).SelectedIndex < 0)
+                    {
+                        control.BackColor = Color.LightSalmon;
+                        todoOk = false;
+                    }
+                    else
+                    {
+                        control.BackColor = SystemColors.Window;
+                    }
+                }
+            }
+
+            return todoOk;
         }
     }
 }

@@ -44,13 +44,13 @@
             btnAgregar = new Button();
             btnLimpiar = new Button();
             btnsalir = new Button();
-            btnExaminar = new Button();
+            txtImagen = new TextBox();
             SuspendLayout();
             // 
             // txtboxCodArt
             // 
             txtboxCodArt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtboxCodArt.Location = new Point(424, 80);
+            txtboxCodArt.Location = new Point(423, 80);
             txtboxCodArt.Name = "txtboxCodArt";
             txtboxCodArt.Size = new Size(100, 23);
             txtboxCodArt.TabIndex = 0;
@@ -58,15 +58,17 @@
             // txtboxPrecio
             // 
             txtboxPrecio.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtboxPrecio.Location = new Point(424, 262);
+            txtboxPrecio.Location = new Point(423, 260);
             txtboxPrecio.Name = "txtboxPrecio";
             txtboxPrecio.Size = new Size(100, 23);
             txtboxPrecio.TabIndex = 6;
+            txtboxPrecio.KeyPress += txtboxPrecio_KeyPress;
+            txtboxPrecio.Validating += txtboxPrecio_Validating;
             // 
             // txtboxDescripcion
             // 
             txtboxDescripcion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtboxDescripcion.Location = new Point(424, 138);
+            txtboxDescripcion.Location = new Point(423, 138);
             txtboxDescripcion.Name = "txtboxDescripcion";
             txtboxDescripcion.Size = new Size(100, 23);
             txtboxDescripcion.TabIndex = 2;
@@ -74,7 +76,7 @@
             // txtboxNombre
             // 
             txtboxNombre.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtboxNombre.Location = new Point(424, 109);
+            txtboxNombre.Location = new Point(423, 109);
             txtboxNombre.Name = "txtboxNombre";
             txtboxNombre.Size = new Size(100, 23);
             txtboxNombre.TabIndex = 1;
@@ -144,7 +146,7 @@
             cboCategoria.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cboCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
             cboCategoria.FormattingEnabled = true;
-            cboCategoria.Location = new Point(424, 196);
+            cboCategoria.Location = new Point(423, 196);
             cboCategoria.Name = "cboCategoria";
             cboCategoria.Size = new Size(100, 23);
             cboCategoria.TabIndex = 4;
@@ -202,16 +204,13 @@
             btnsalir.UseVisualStyleBackColor = true;
             btnsalir.Click += btnsalir_Click;
             // 
-            // btnExaminar
+            // txtImagen
             // 
-            btnExaminar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            btnExaminar.Font = new Font("Microsoft Sans Serif", 9.75F);
-            btnExaminar.Location = new Point(423, 225);
-            btnExaminar.Name = "btnExaminar";
-            btnExaminar.Size = new Size(101, 30);
-            btnExaminar.TabIndex = 5;
-            btnExaminar.Text = "Examinar";
-            btnExaminar.UseVisualStyleBackColor = true;
+            txtImagen.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtImagen.Location = new Point(423, 229);
+            txtImagen.Name = "txtImagen";
+            txtImagen.Size = new Size(100, 23);
+            txtImagen.TabIndex = 18;
             // 
             // FrmArticulo
             // 
@@ -219,7 +218,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(800, 450);
-            Controls.Add(btnExaminar);
+            Controls.Add(txtImagen);
             Controls.Add(btnsalir);
             Controls.Add(btnLimpiar);
             Controls.Add(btnAgregar);
@@ -265,6 +264,6 @@
         private Button btnAgregar;
         private Button btnLimpiar;
         private Button btnsalir;
-        private Button btnExaminar;
+        private TextBox txtImagen;
     }
 }
