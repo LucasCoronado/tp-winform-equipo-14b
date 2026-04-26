@@ -69,14 +69,17 @@ namespace TPWinForm_equipo14B
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            ImagenNegocio imgNegocio = new ImagenNegocio();
+            
+            Articulo nuevo = new Articulo();
+            try
+            {
             if (!validarCampos())
             {
                 MessageBox.Show("Por favor, complete los campos marcados en rojo.");
                 return;
             }
-            Articulo nuevo = new Articulo();
-            ArticuloNegocio negocio = new ArticuloNegocio();
 
             nuevo.Codigo = txtboxCodArt.Text;
             nuevo.Nombre = txtboxNombre.Text;
@@ -85,31 +88,34 @@ namespace TPWinForm_equipo14B
 
             nuevo.IdMarca = ((Marca)cboMarca.SelectedItem).Id;
             nuevo.IdCategoria = ((Categoria)cboCategoria.SelectedItem).Id;
-            
+
+            nuevo.Imagenes = articulo?.Imagenes ?? new List<Imagen>();
+
             if (articulo == null)
             {
-                try
-                {
+                int idGenerado = negocio.Agregar(nuevo);
+                imgNegocio.GuardarImagenes(idGenerado, nuevo.Imagenes);
+                MessageBox.Show("Agregado correctamente");
 
-                    negocio.Agregar(nuevo);
-
-                    MessageBox.Show("Artículo agregado correctamente");
-                    Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
             }
             else
             {
-                negocio.Modificar(articulo, nuevo);
-                MessageBox.Show("Artículo modificado correctamente");
-                Close();
-            }
+                nuevo.Id = articulo.Id;
 
+                negocio.Modificar(articulo, nuevo);
+                imgNegocio.GuardarImagenes(nuevo.Id, nuevo.Imagenes);
+                MessageBox.Show("Modificado correctamente");
+            }
             this.DialogResult = DialogResult.OK;
+            Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
+
 
         private void txtboxPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -181,6 +187,29 @@ namespace TPWinForm_equipo14B
             }
 
             return todoOk;
+        }
+
+        private void btnImagenes_Click(object sender, EventArgs e)
+        {
+
+            ImagenNegocio imgNegocio = new ImagenNegocio();
+
+            if (articulo == null) 
+            {
+                articulo.Imagenes = new List<Imagen>();
+            }
+            else
+            {
+                articulo.Imagenes = imgNegocio.ListarPorId(articulo.Id);
+            }
+
+            frmGestionImagenes ventana = new frmGestionImagenes(articulo.Imagenes);
+            ventana.ShowDialog();
+
+            if (ventana.DialogResult == DialogResult.OK)
+            {
+                articulo.Imagenes = ventana.ListaFinal;
+            }
         }
     }
 }

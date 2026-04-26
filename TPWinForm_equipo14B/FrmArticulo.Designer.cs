@@ -44,7 +44,7 @@
             btnAgregar = new Button();
             btnLimpiar = new Button();
             btnsalir = new Button();
-            txtImagen = new TextBox();
+            btnImagenes = new Button();
             SuspendLayout();
             // 
             // txtboxCodArt
@@ -58,7 +58,7 @@
             // txtboxPrecio
             // 
             txtboxPrecio.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtboxPrecio.Location = new Point(423, 260);
+            txtboxPrecio.Location = new Point(423, 225);
             txtboxPrecio.Name = "txtboxPrecio";
             txtboxPrecio.Size = new Size(100, 23);
             txtboxPrecio.TabIndex = 6;
@@ -95,7 +95,7 @@
             // 
             lbPrecio.AutoSize = true;
             lbPrecio.Font = new Font("Microsoft Sans Serif", 9.75F);
-            lbPrecio.Location = new Point(258, 260);
+            lbPrecio.Location = new Point(258, 225);
             lbPrecio.Name = "lbPrecio";
             lbPrecio.Size = new Size(46, 16);
             lbPrecio.TabIndex = 10;
@@ -165,7 +165,7 @@
             // 
             lblImagen.AutoSize = true;
             lblImagen.Font = new Font("Microsoft Sans Serif", 9.75F);
-            lblImagen.Location = new Point(257, 231);
+            lblImagen.Location = new Point(257, 260);
             lblImagen.Name = "lblImagen";
             lblImagen.Size = new Size(52, 16);
             lblImagen.TabIndex = 17;
@@ -204,13 +204,16 @@
             btnsalir.UseVisualStyleBackColor = true;
             btnsalir.Click += btnsalir_Click;
             // 
-            // txtImagen
+            // btnImagenes
             // 
-            txtImagen.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtImagen.Location = new Point(423, 229);
-            txtImagen.Name = "txtImagen";
-            txtImagen.Size = new Size(100, 23);
-            txtImagen.TabIndex = 18;
+            btnImagenes.Font = new Font("Microsoft Sans Serif", 9.75F);
+            btnImagenes.Location = new Point(423, 254);
+            btnImagenes.Name = "btnImagenes";
+            btnImagenes.Size = new Size(100, 53);
+            btnImagenes.TabIndex = 18;
+            btnImagenes.Text = "Gestion de Imagenes";
+            btnImagenes.UseVisualStyleBackColor = true;
+            btnImagenes.Click += btnImagenes_Click;
             // 
             // FrmArticulo
             // 
@@ -218,7 +221,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(800, 450);
-            Controls.Add(txtImagen);
+            Controls.Add(btnImagenes);
             Controls.Add(btnsalir);
             Controls.Add(btnLimpiar);
             Controls.Add(btnAgregar);
@@ -264,6 +267,6 @@
         private Button btnAgregar;
         private Button btnLimpiar;
         private Button btnsalir;
-        private TextBox txtImagen;
+        private Button btnImagenes;
     }
 }

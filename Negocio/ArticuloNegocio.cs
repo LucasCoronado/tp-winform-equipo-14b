@@ -92,7 +92,7 @@ namespace Negocio
             }
         }
 
-        public void Agregar(Articulo nuevo)
+        public int Agregar(Articulo nuevo)
         {
             AccesoDatos datos = new AccesoDatos();
 
@@ -101,7 +101,8 @@ namespace Negocio
                 datos.SetearConsulta(@"INSERT INTO ARTICULOS
                                       (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio)
                                       VALUES
-                                      (@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @Precio)");
+                                      (@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @Precio);
+                                        SELECT SCOPE_IDENTITY()");
 
                 datos.SetearParametro("@Codigo", nuevo.Codigo);
                 datos.SetearParametro("@Nombre", nuevo.Nombre);
@@ -110,7 +111,7 @@ namespace Negocio
                 datos.SetearParametro("@IdCategoria", nuevo.IdCategoria);
                 datos.SetearParametro("@Precio", nuevo.Precio);
 
-                datos.ejecutarAccion();
+                return (int)(decimal)datos.ejecutarScalar();
             }
             catch (Exception)
             {

@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Data.SqlClient;
 
 namespace Negocio
 {
@@ -46,7 +47,7 @@ namespace Negocio
             comando.Connection = conexion;
             try
             {
-                conexion.Open();
+                abrirConexion();
                 lector = comando.ExecuteReader();
             }
             catch(Exception)
@@ -60,7 +61,7 @@ namespace Negocio
             comando.Connection = conexion;
             try
             {
-                conexion.Open();
+                abrirConexion();
                 comando.ExecuteNonQuery();
             }
             catch (Exception)
@@ -69,11 +70,32 @@ namespace Negocio
             }
         }
 
+        public object ejecutarScalar()
+        {
+            try
+            {
+                abrirConexion();
+                return comando.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public void cerrarConexion()
         {
             if (lector != null)
                 lector.Close();
             conexion.Close();
+        }
+
+        public void abrirConexion()
+        {
+            if (conexion.State != ConnectionState.Open)
+            {
+                conexion.Open();
+            }
         }
 
     }

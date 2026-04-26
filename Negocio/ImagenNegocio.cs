@@ -47,5 +47,38 @@ namespace Negocio
             }
         }
 
+        public void GuardarImagenes(int idArticulo, List<Imagen> listaNueva)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.SetearConsulta("DELETE FROM IMAGENES WHERE IdArticulo = @IdArticulo");
+                datos.SetearParametro("@IdArticulo", idArticulo);
+                datos.ejecutarAccion();
+
+                foreach (var img in listaNueva)
+                {
+                    datos.SetearConsulta("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES (@IdArticulo, @Url)");
+                    datos.SetearParametro("@IdArticulo", idArticulo);
+                    datos.SetearParametro("@Url", img.ImagenUrl);
+
+                    datos.ejecutarAccion();
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+
+
+
     }
 }
