@@ -44,5 +44,17 @@ namespace TPWinForm_equipo14B
             frmDetallesArticulos detallesArticulos = new frmDetallesArticulos();
             detallesArticulos.ShowDialog();
         }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            frmCategorias categorias = new frmCategorias();
+            categorias.ShowDialog();
+        }
+
+        private void btnMarcas_Click(object sender, EventArgs e)
+        {
+            frmMarcas marcas = new frmMarcas();
+            marcas.ShowDialog();
+        }
     }
 }

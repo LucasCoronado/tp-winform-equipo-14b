@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace TPWinForm_equipo14B
 {
     public partial class frmDetallesArticulos : Form
-    {
+    {   
         public frmDetallesArticulos()
         {
             InitializeComponent();
