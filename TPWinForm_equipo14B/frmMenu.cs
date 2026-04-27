@@ -56,5 +56,11 @@ namespace TPWinForm_equipo14B
             frmMarcas marcas = new frmMarcas();
             marcas.ShowDialog();
         }
+
+        private void btnBusqArt_Click(object sender, EventArgs e)
+        {
+            frmBusquedaArticulos busqueda = new frmBusquedaArticulos();
+            busqueda.ShowDialog();
+        }
     }
 }

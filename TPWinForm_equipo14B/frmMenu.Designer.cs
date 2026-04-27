@@ -81,6 +81,7 @@
             btnBusqArt.Size = new Size(130, 90);
             btnBusqArt.TabIndex = 2;
             btnBusqArt.UseVisualStyleBackColor = true;
+            btnBusqArt.Click += btnBusqArt_Click;
             // 
             // btnAgregarArt
             // 
