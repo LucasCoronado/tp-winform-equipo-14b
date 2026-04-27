@@ -19,7 +19,7 @@ namespace TPWinForm_equipo14B.Properties {
     // a través de una herramienta como ResGen o Visual Studio.
     // Para agregar o quitar un miembro, edite el archivo .ResX y, a continuación, vuelva a ejecutar ResGen
     // con la opción /str o recompile su proyecto de VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -83,6 +83,16 @@ namespace TPWinForm_equipo14B.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap derechos_de_autor {
+            get {
+                object obj = ResourceManager.GetObject("derechos-de-autor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap detalle_articulos {
             get {
                 object obj = ResourceManager.GetObject("detalle-articulos", resourceCulture);
@@ -116,6 +126,16 @@ namespace TPWinForm_equipo14B.Properties {
         internal static System.Drawing.Bitmap modificar_articulos {
             get {
                 object obj = ResourceManager.GetObject("modificar-articulos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap opciones {
+            get {
+                object obj = ResourceManager.GetObject("opciones", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

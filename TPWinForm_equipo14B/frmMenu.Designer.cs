@@ -237,7 +237,7 @@
             // 
             // btnMarcas
             // 
-            btnMarcas.BackgroundImage = Properties.Resources.detalle_articulos;
+            btnMarcas.BackgroundImage = Properties.Resources.derechos_de_autor;
             btnMarcas.BackgroundImageLayout = ImageLayout.Zoom;
             btnMarcas.Location = new Point(585, 252);
             btnMarcas.Name = "btnMarcas";
@@ -248,7 +248,7 @@
             // 
             // btnCategorias
             // 
-            btnCategorias.BackgroundImage = Properties.Resources.busqueda_articulos;
+            btnCategorias.BackgroundImage = Properties.Resources.opciones;
             btnCategorias.BackgroundImageLayout = ImageLayout.Zoom;
             btnCategorias.Location = new Point(585, 104);
             btnCategorias.Name = "btnCategorias";
